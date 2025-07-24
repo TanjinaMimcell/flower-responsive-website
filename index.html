@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/flower.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-    <nav class="navbar">
-  <div class="logo">🌸 fauget</div>
+<body class="bg-gray-50">
 
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">About us</a>
-    <a href="#" class="cart-icon">
-      <img src="cart.svg" alt="Cart" />
-      <span>$56</span>
-    </a>
+  <!--  Navbar -->
+  <nav class="flex justify-between items-center p-4 md:px-16 bg-white shadow">
+    <!-- Logo -->
+     <img src="assets/logo.png" alt="logo" class="" />
+    
+
+   
+   <!-- Menu and Cart -->
+<div class="flex items-center text-gray-700">
+
+  <!-- Menu (Desktop only) -->
+  <ul class="hidden md:flex items-center space-x-4">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <!-- Cart (Visible on all screens) -->
+  <div class="flex items-center space-x-1 ml-4">
+    <img src="assets/shopping-cart.png" alt="Cart" class="w-5 h-5" />
+    <span class="text-sm">Cart($56)</span> <!-- No hidden class here -->
   </div>
+
+</div>
 </nav>
 
-
-<section class="flex flex-col md:flex-row items-center md:justify-between px-4 md:px-20 py-10">
-  <!-- Content: Title & Paragraph -->
-  <div class="md:w-1/2 text-left space-y-4">
-    <h1 class="text-3xl md:text-5xl font-bold text-gray-800">
-      Your Banner Title Here
-    </h1>
-    <p class="text-gray-600 text-base md:text-lg">
-      This is the supporting paragraph. It explains more about the banner content and draws the user’s attention.
-    </p>
+  <!-- Banner Section -->
+<section class="flex flex-col md:flex-row items-center px-4 md:px-16 py-12 bg-white">
+  <!--  Image First for Mobile -->
+  <div class="w-full md:w-1/2 order-1 md:order-2 mt-8 md:mt-0">
+    <img src="assets/hero-flower.png" alt="Banner" class="w-full h-auto object-cover rounded-lg" />
   </div>
 
-  <!-- Banner Image -->
-  <div class="md:w-1/2 mt-6 md:mt-0">
-    <img src="your-image-path.jpg" alt="Banner Image" class="w-full h-auto object-cover" />
-  </div>
+  <!-- Text After Image on Mobile, First on Desktop -->
+    <div class="w-full md:w-1/2 order-2 md:order-1 space-y-4 text-left">
+  <h1 class="text-[4.0625rem] font-bold text-gray-800 font-['Noto_Serif'] leading-tight">
+    ALWAYS <span class="text-[#E95A08] font-bold">FRESH</span>
+    <span class="text-[#E95A08] font-bold">FLOWERS</span>
+  </h1>
+  <p class="text-[1.375rem] text-black/50 font-inter font-normal">
+  Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. 
+</p>
+
+</div>
+
 </section>
 
 
+  
+
+</body>
+</html>
 
 
-    </header>
-    
 </body>
 </html>
